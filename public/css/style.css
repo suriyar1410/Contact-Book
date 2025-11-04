@@ -1,0 +1,217 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #EDA35A !important;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #5682b1;
+  font-weight: 600;
+}
+
+form {
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  margin: 20px auto;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #5682b1;
+  font-size: 1rem;
+  color: #000000;
+}
+
+input.form-control:focus {
+  border-color: #0ba6df;
+  outline: none;
+  box-shadow: 0 0 6px rgba(11, 166, 223, 0.4);
+}
+
+button.btn {
+  background-color: #0ba6df;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: #5682b1;
+}
+
+.no-account {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-account a {
+  color: #5682b1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.no-account a:hover {
+  text-decoration: underline;
+  color: #0ba6df;
+}
+
+.card {
+  background: #ffffff;
+  border: 2px solid #5682b1;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  padding-top: 10px; 
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: #0ba6df;
+}
+
+.card-text {
+  color: #000000;
+}
+
+.btn-success {
+  background-color: #28a745 !important; 
+  color: #fff !important;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34 !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important; 
+  color: #fff !important;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c !important;
+}
+
+.add-contact-form {
+  max-width: 450px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  border: 2px solid #5682b1;
+}
+
+.vh-100 {
+  height: 100vh; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0; 
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: -18px;
+}
+
+.contact-buttons form {
+  flex: 1;
+  margin: 0;
+}
+
+.contact-buttons .btn {
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.signin-form {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  border: 2px solid #5682b1;
+}
+.white{
+  color: white !important;
+}
+@media (max-width: 576px) {
+  .signin-form {
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  form {
+    padding: 20px;
+  }
+  .card {
+    border-radius: 12px;
+  }
+  .contact-buttons {
+    flex-direction: row !important; 
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .contact-buttons .btn {
+    flex: 1;
+    width: 48%;
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+  .contact-buttons {
+    flex-direction: column;
+  }
+  .contact-buttons .btn {
+    width: 100%;
+  }
+  .btn-danger {
+   padding:10px !important;
+  }
+  .btn-success {
+  padding: 10px !important;
+  }
+
+}

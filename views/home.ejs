@@ -1,0 +1,60 @@
+<%- include("partials/header") %>
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+    <h2 class="fw-bold text-primary">Welcome</h2>
+    <div>
+      <a href="/add-contact" class="btn btn-success me-2">
+        <i class="fa-solid fa-plus"></i> Add Contact
+      </a>
+      <a href="/logout" class="btn btn-outline-danger">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </a>
+    </div>
+  </div>
+  <% if (errormsg && errormsg !== "") { %>
+    <p class="text-center text-danger fw-semibold"><%= errormsg %></p>
+  <% } %>
+  <% if (foundcontacts.length > 0) { %>
+    <div class="row gap-2">
+      <% foundcontacts.forEach((element) => { %>
+        <div class="col-md-6 col-lg-4">
+          <div class="card rounded-4 hover-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fa-solid fa-user text-primary fs-4 me-2"></i>
+                <h5 class="card-title mb-0"><%= element.contactname %></h5>
+              </div>
+              <p class="card-text text-muted">
+                <i class="fa-solid fa-mobile me-2 text-secondary"></i>
+                <%= element.contactnumber %>
+              </p>
+              <div class="d-flex justify-content-between">
+                <form action="tel:+91<%= element.contactnumber %>" method="get">
+                  <button type="submit" class="btn btn-success">
+                    <i class="fa-solid fa-phone"></i> Call
+                  </button>
+                </form>
+
+                <form action="/delete-contact" method="POST">
+                  <input type="hidden" name="deleteButton" value="<%= element._id %>">
+                  <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-trash"></i> Delete
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="text-center white mt-5">
+      <i class="fa-solid fa-address-book fa-4x  mb-3"></i>
+      <h4 class="white">No contacts found yet.</h4>
+      <p>Add your first contact using the button above!</p>
+    </div>
+  <% } %>
+</div>
+
+<%- include("partials/footer") %>
